@@ -2,13 +2,14 @@ let registeredIdToken;
 const axios = require("axios");
 const config = require('./config')
 
+//write all resuable code here for generating auth token and use this in actual test
 async function registerUserForValidToken() {
     const response = await axios.post(config.authURL.registrationEndpoint, {
         name: "API_Test",
         email: "Devluuilu@hua.com",
         password: 123456
     })
-    .catch(err => console.log(err));
+        .catch(err => console.log(err));
     return response.data.data.Token;
 }
 
@@ -19,7 +20,7 @@ async function loginAsRegisteredUser() {
         password: 123456
     }, {
         headers: {
-            Authorization: 'bearer' +registeredIdToken
+            Authorization: 'bearer' + registeredIdToken
         }
     }).catch(err => console.log(err));
     return response.data.data.Token;
