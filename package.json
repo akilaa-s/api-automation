@@ -1,0 +1,27 @@
+{
+  "name": "api-automation",
+  "version": "1.0.0",
+  "description": "Automate APIs and validate server side for better performance and early feedback",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx mocha test/*/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akilaa-s/api-automation.git"
+  },
+  "author": "Akilaa S",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akilaa-s/api-automation/issues"
+  },
+  "homepage": "https://github.com/akilaa-s/api-automation#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "dotenv": "^16.0.3",
+    "mocha": "^10.0.0"
+  }
+}
