@@ -1,7 +1,9 @@
 # api-automation
 Automate APIs and validate server side for better performance and early feedback
-
-script to run test - npx mocha test/*/*.js
+Rest API automation using axios, chai and mocha
+The intent of this repo is to emphasize of code hygine, folder structure, code resuability and dynamic authentication token generation
+---------
+Script to run test - npx mocha test/*/*.js
 ---------
 # initial setup - from scratch
 1. npm init
@@ -16,6 +18,9 @@ dotenv - npm install dotenv --save
 -------------
 # stack
 nodejs
+assertion library - chai
+runtime - mocha
+axios
 -------------
 # possible errors in nodejs
 1. use module.exports = {} if you have a lot of common methods,variables to be exported -> EX: module.exports = {getValidToken, getAccessUsingIdToken}
@@ -45,7 +50,7 @@ await axios.post(config.API.yourPostAPI,
                         },
                     });
 3. Always use catch block for catching error responses in case of error
-ex:
+Example:
  const response = await axios
                 .post(
                     config.API.yourAPU,
@@ -61,10 +66,12 @@ ex:
                     errorResponse = error.response;
                 });
 Instantiate them globally as let errorResponse;
+
+4. For post requests, the order of params are important (with or wothout body params being sent) i.e axios.post(url,{body},{headers}) -> If this order is not maintained when body or some block is not passed, unauthorized error will be thrown. 
 -------------
 # .env
 1. create an .env file locally to store all common variables needed for the code, can be imported using process.env
-BASE_ENDPOINT_URL = "your url here"
+API_BASE_URL = "your url here"
 API_KEY = "your api key here"
 CLIENT_ID  = "your client id here"
 2. Use these in config.js which contains all the API and links for reference -> npm install dotenv --save
