@@ -9,8 +9,7 @@ console.log(baseURL);
 const config = {
     API: {
         getUsers: `${baseURL}/api/users`,
-        createUsers: `${baseURL}/api/users`,
-        deleteUserById: `${baseURL}/api/users/`
+        createUsers: `${baseURL}/api/users`
     },
     authURL: {
         registrationEndpoint: `${baseURL}/api/authaccount/registration`,

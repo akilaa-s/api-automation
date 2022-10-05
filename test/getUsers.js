@@ -35,7 +35,7 @@ describe('Get an user', async () => {
             },
         })
             .catch(err => {
-               errResponse = err.response;
+                errResponse = err.response;
             });
         assert(errResponse.status, 401)
         assert(errResponse.statusText, 'Unauthorized')
