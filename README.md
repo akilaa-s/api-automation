@@ -38,7 +38,8 @@ axios
 4. in actual test or js file, while importing, use const {assert, should} = require('chai') if there is are more methods to be imported at once , i.e avec {}
 -------------
 # possible errors in axios
-1. For get calls, check the params and auth params - they should be as one object
+1. For get calls, check the params and auth params - they should be as one object:
+
 axios.get(config.API.yourGetAPI, {
             headers: {
                 "x-api-key": config.apiKey,
@@ -49,7 +50,8 @@ axios.get(config.API.yourGetAPI, {
                 projectID: 'Sparrow'
             },
         })
-2. For post calls, body params and auth params are two different entities
+2. For post calls, body params and auth params are two different entities :
+
 await axios.post(config.API.yourPostAPI,
                     { projectName: "Animal" },
                     {
