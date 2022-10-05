@@ -31,57 +31,6 @@ assertion library - chai
 runtime - mocha
 axios
 -------------
-# possible errors in nodejs
-1. use module.exports = {} if you have a lot of common methods,variables to be exported -> EX: module.exports = {getValidToken, getAccessUsingIdToken}
-2. use module.exportS = variable or single method without {} -> EX: module.exports = config
-3. in actual test or js file, while importing, use const abc = require('falso') if there is only method to be imported , i.e sans {}
-4. in actual test or js file, while importing, use const {assert, should} = require('chai') if there is are more methods to be imported at once , i.e avec {}
--------------
-# possible errors in axios
-1. For get calls, check the params and auth params - they should be as one object:
-
-axios.get(config.API.yourGetAPI, {
-            headers: {
-                "x-api-key": config.apiKey,
-                "Authorization": idtoken
-            },
-            params: {
-                name: 'test',
-                projectID: 'Sparrow'
-            },
-        })
-
-2. For post calls, body params and auth params are two different entities :
-
-await axios.post(config.API.yourPostAPI,
-                    { projectName: "Animal" },
-                    {
-                        headers: {
-                            "X-Api-Key": "your api key",
-                            "Authorization": idToken
-                        },
-                    });
-                    
-3. Always use catch block for catching error responses in case of error
-Example:
- const response = await axios
-                .post(
-                    config.API.yourAPU,
-                    { batchName: "Animal" },
-                    {
-                        headers: {
-                            "X-Api-Key": "abcdhajhd1231asda",
-                            "Authorization": idToken
-                        },
-                    }
-                )
-                .catch(function (error) {
-                    errorResponse = error.response;
-                });
-Instantiate them globally as let errorResponse;
-
-4. For post requests, the order of params are important (with or wothout body params being sent) i.e axios.post(url,{body},{headers}) -> If this order is not maintained when body or some block is not passed, unauthorized error will be thrown. 
--------------
 # .env
 1. create an .env file locally to store all common variables needed for the code, can be imported using process.env
 API_BASE_URL = "your url here"
