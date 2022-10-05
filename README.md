@@ -9,8 +9,9 @@ The intent of this repo is to emphasize of code hygine, folder structure, code r
 Script to run test - npx mocha test/*/*.js
 ---------
 # initial setup - from scratch
-1. npm init
-and install dependencies
+1. npm init and install dependencies
+2. add .gitignore and place nodemodules in it
+
 # dependencies
 axios - npm i axios
 
@@ -19,8 +20,6 @@ falso - npm i @ngneat/falso
 chai,mocha - npm install mocha chai --save-dev
 
 dotenv - npm install dotenv --save
-
-2. add .gitignore and place nodemodules in it
 
 -------------
 # stack
