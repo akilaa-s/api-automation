@@ -13,11 +13,15 @@ Script to run test - npx mocha test/*/*.js
 and install dependencies
 # dependencies
 axios - npm i axios
+
 falso - npm i @ngneat/falso
-chai - npm install mocha chai --save-dev
-mocha
+
+chai,mocha - npm install mocha chai --save-dev
+
 dotenv - npm install dotenv --save
+
 2. add .gitignore and place nodemodules in it
+
 -------------
 # stack
 nodejs
