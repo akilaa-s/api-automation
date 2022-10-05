@@ -1,6 +1,8 @@
 # api-automation
-Automate APIs and validate server side for better performance and early feedback
-Rest API automation using axios, chai and mocha
+Automate APIs and validate server side for better performance and early feedback.
+
+Rest API automation using axios, chai and mocha.
+
 The intent of this repo is to emphasize of code hygine, folder structure, code resuability and dynamic authentication token generation
 ---------
 Script to run test - npx mocha test/*/*.js
