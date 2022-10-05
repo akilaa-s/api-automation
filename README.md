@@ -1,4 +1,7 @@
 # api-automation
+
+Used Api Base Url- http://restapi.adequateshop.com which is dummy rest JSON API for testing in postman with dummy data
+
 Automate APIs and validate server side for better performance and early feedback.
 
 Rest API automation using axios, chai and mocha.
