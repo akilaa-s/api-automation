@@ -50,6 +50,7 @@ axios.get(config.API.yourGetAPI, {
                 projectID: 'Sparrow'
             },
         })
+
 2. For post calls, body params and auth params are two different entities :
 
 await axios.post(config.API.yourPostAPI,
@@ -60,6 +61,7 @@ await axios.post(config.API.yourPostAPI,
                             "Authorization": idToken
                         },
                     });
+                    
 3. Always use catch block for catching error responses in case of error
 Example:
  const response = await axios
