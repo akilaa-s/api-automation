@@ -6,7 +6,7 @@ const config = require('./config')
 async function registerUserForValidToken() {
     const response = await axios.post(config.authURL.registrationEndpoint, {
         name: "API_Test",
-        email: "Devluuilu@hua.com",
+        email: "Devlhuuu@hua.com",
         password: 123456
     })
         .catch(err => console.log(err));
@@ -16,7 +16,7 @@ async function registerUserForValidToken() {
 async function loginAsRegisteredUser() {
     registeredIdToken = await registerUserForValidToken();
     const response = await axios.post(config.authURL.loginEndpoint, {
-        email: "Devluuilu@hua.com",
+        email: "Devlhuuu@hua.com",
         password: 123456
     }, {
         headers: {

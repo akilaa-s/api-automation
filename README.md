@@ -77,8 +77,8 @@ CLIENT_ID  = "your client id here"
 2. Use these in config.js which contains all the API and links for reference -> npm install dotenv --save
 -------------
 # setUp and tear down
-1. Use before() block to initiate token , random names and commonly used varaibles
-2. Instantiate them globally as let variableName;
+1. Use before() block to initiate token , random names and commonly used varaibles if you want to reuse the same variable for all the tests
+2. Instantiate them globally as let variableName and use it everywhere
 -------------
 # code hygiene
 1. Have folder structure 
