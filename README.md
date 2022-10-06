@@ -9,7 +9,7 @@ Rest API automation using axios, chai and mocha.
 The intent of this repo is to emphasize of code hygine, folder structure, code resuability and dynamic authentication token generation
 
 ---------
-Script to run test - npx mocha test/*/*.js
+Script to run test - npx mocha test/file_name.js
 ---------
 # initial setup - from scratch
 1. npm init and install dependencies
